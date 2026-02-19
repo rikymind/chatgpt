@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clínica de Atención Integral en Adicciones</title>
+    <style>
+      :root {
+        --azul: #005ea8;
+        --rojo: #ff3b1f;
+        --fondo: #efefef;
+        --texto: #0c3d66;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+        background: radial-gradient(circle at top, #ffffff 0%, var(--fondo) 70%);
+        color: var(--texto);
+      }
+
+      .card {
+        width: min(94vw, 900px);
+        background: #ffffff;
+        border-radius: 22px;
+        padding: clamp(1.5rem, 4vw, 3rem);
+        text-align: center;
+        box-shadow: 0 16px 50px rgba(0, 0, 0, 0.12);
+      }
+
+      .logo {
+        width: min(220px, 55vw);
+        display: block;
+        margin: 0 auto 1.25rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.3rem, 3.2vw, 2.2rem);
+        letter-spacing: 0.24em;
+        line-height: 1.4;
+        color: var(--azul);
+      }
+
+      .sub {
+        margin-top: 1rem;
+        font-size: clamp(0.95rem, 2vw, 1.2rem);
+        color: #40637f;
+      }
+
+      .accent {
+        color: var(--rojo);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <svg class="logo" viewBox="0 0 260 240" aria-label="Logo Clínica Atención Integral" role="img">
+        <path
+          fill="#ff3b1f"
+          d="M57 207c15-58 45-95 52-140-16 22-35 24-62 29 13-18 44-30 67-36 23-6 42-20 50-42 2 14-1 32-10 46-11 17-31 30-42 53-9 18-11 49-6 90-15 1-31 1-49 0Z"
+        />
+        <circle cx="102" cy="27" r="17" fill="#ff3b1f" />
+        <path
+          fill="#005ea8"
+          d="M145 43h35l66 164h-35l-11-29h-70l-13 29h-35L145 43Zm-1 106h45l-21-59h-2l-22 59Z"
+        />
+      </svg>
+
+      <h1>CLÍNICA DE ATENCIÓN<br />INTEGRAL EN ADICCIONES</h1>
+      <p class="sub">
+        Atención profesional, humana y <span class="accent">comprometida con tu bienestar</span>.
+      </p>
+    </main>
+  </body>
+</html>
