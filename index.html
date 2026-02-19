@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Renacer | Recuperación de Adicciones</title>
+  <style>
+    :root {
+      --primary: #1d7a8c;
+      --secondary: #b2dbbf;
+      --accent: #f3ffbd;
+      --text: #1f2933;
+      --bg: #f7fbfc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #145b68);
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.3px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.25rem 0.45rem;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .menu a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .hero {
+      background: radial-gradient(circle at top right, var(--accent), transparent 45%),
+                  linear-gradient(180deg, #ffffff, #e6f6f8);
+      padding: 4rem 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      margin-top: 0;
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: #0f4c57;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 1.1rem;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1rem;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 3rem 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 20px rgba(10, 71, 82, 0.08);
+    }
+
+    h2 {
+      color: #145b68;
+      margin-top: 0;
+      font-size: 1.9rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .feature {
+      background: #f2fbfd;
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    .location-box {
+      background: #eaf6f7;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    footer {
+      background: #0f4c57;
+      color: #d9f2f5;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 0.75rem 1rem; }
+      section, .hero { padding: 2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Clínica Renacer</div>
+      <div class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#ubicacion">Ubicación</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <h1>Tu camino hacia una vida libre de adicciones comienza hoy</h1>
+        <p>
+          En Clínica Renacer brindamos atención profesional, humana y confidencial para personas y familias
+          que buscan superar las adicciones y recuperar su bienestar integral.
+        </p>
+        <a class="cta" href="#ubicacion">Solicitar orientación</a>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="container card">
+        <h2>Nosotros</h2>
+        <p>
+          Somos una clínica especializada en tratamiento de adicciones con un enfoque multidisciplinario.
+          Nuestro equipo está conformado por médicos, psicólogos, terapeutas y trabajadores sociales
+          comprometidos con una recuperación sostenible.
+        </p>
+
+        <div class="features">
+          <article class="feature">
+            <h3>Atención personalizada</h3>
+            <p>Cada paciente recibe un plan terapéutico adaptado a sus necesidades.</p>
+          </article>
+          <article class="feature">
+            <h3>Apoyo familiar</h3>
+            <p>Incluimos a la familia en el proceso para fortalecer la red de apoyo.</p>
+          </article>
+          <article class="feature">
+            <h3>Programas integrales</h3>
+            <p>Tratamiento médico, psicológico y seguimiento continuo en todas las etapas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion">
+      <div class="container card">
+        <h2>Ubicación</h2>
+        <p>Visítanos y conoce nuestras instalaciones en un entorno seguro y tranquilo.</p>
+        <div class="location-box">
+          <strong>Clínica Renacer</strong><br />
+          Av. Esperanza 245, Col. San Rafael<br />
+          Ciudad de México, C.P. 06470<br />
+          Tel: (55) 1234 5678
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Clínica Renacer · Recuperación con dignidad y esperanza
+  </footer>
+</body>
+</html>
