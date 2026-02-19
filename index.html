@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Clínica de Atención Integral en Adicciones - tratamiento profesional, humano y confidencial." />
+  <title>Clínica de Atención Integral en Adicciones</title>
+  <style>
+    :root {
+      --azul-principal: #1F5E8C;
+      --naranja-acento: #FF4B2B;
+      --gris-fondo: #F4F6F8;
+      --texto-oscuro: #1A1A1A;
+      --blanco: #FFFFFF;
+      --sombra-suave: 0 10px 25px rgba(31, 94, 140, 0.12);
+      --radio: 14px;
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--texto-oscuro);
+      background: var(--gris-fondo);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max-width), 92%);
+      margin: 0 auto;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(31, 94, 140, 0.12);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--azul-principal);
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.2px;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      background: linear-gradient(145deg, var(--azul-principal), #3b7aa7);
+      display: grid;
+      place-items: center;
+      color: var(--blanco);
+      font-size: 1.2rem;
+      box-shadow: var(--sombra-suave);
+      flex-shrink: 0;
+    }
+
+    .menu {
+      display: flex;
+      gap: 1.1rem;
+      align-items: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: var(--texto-oscuro);
+      font-weight: 600;
+      font-size: 0.96rem;
+      padding: 0.45rem 0.55rem;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .menu a:hover,
+    .menu a:focus-visible {
+      color: var(--azul-principal);
+      background: rgba(31, 94, 140, 0.08);
+      outline: none;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: var(--azul-principal);
+      color: var(--blanco);
+      border-radius: 10px;
+      padding: 0.5rem 0.7rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Sections */
+    section {
+      scroll-margin-top: 92px;
+      padding: 88px 0;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(to right, rgba(244, 246, 248, 0.92), rgba(255, 255, 255, 0.96)),
+        radial-gradient(circle at 80% 20%, rgba(31, 94, 140, 0.18), transparent 40%),
+        radial-gradient(circle at 10% 80%, rgba(255, 75, 43, 0.14), transparent 32%);
+      padding-top: 120px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero h1 {
+      margin: 0 0 1rem;
+      color: var(--azul-principal);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.4px;
+    }
+
+    .hero p {
+      margin: 0 0 1.8rem;
+      max-width: 58ch;
+      font-size: 1.08rem;
+      color: #2f3b44;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      background: var(--naranja-acento);
+      color: var(--blanco);
+      padding: 0.86rem 1.25rem;
+      border-radius: 11px;
+      font-weight: 700;
+      box-shadow: 0 12px 28px rgba(255, 75, 43, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta:hover,
+    .cta:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 34px rgba(255, 75, 43, 0.34);
+      outline: none;
+    }
+
+    .hero-card {
+      background: var(--blanco);
+      border-radius: var(--radio);
+      box-shadow: var(--sombra-suave);
+      padding: 1.5rem;
+      border: 1px solid rgba(31, 94, 140, 0.12);
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      color: var(--azul-principal);
+      font-size: 1.2rem;
+    }
+
+    .hero-card p {
+      margin: 0;
+      font-size: 0.98rem;
+      color: #38444e;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--azul-principal);
+      font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+      margin: 0 0 2.1rem;
+      letter-spacing: -0.25px;
+    }
+
+    /* Nosotros */
+    .nosotros-wrap {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.35rem;
+      align-items: stretch;
+    }
+
+    .panel {
+      background: var(--blanco);
+      border-radius: var(--radio);
+      box-shadow: var(--sombra-suave);
+      padding: 1.4rem;
+      border: 1px solid rgba(31, 94, 140, 0.12);
+    }
+
+    .panel p { margin-top: 0; }
+
+    .values {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .values li {
+      background: #f8fafc;
+      border: 1px solid rgba(31, 94, 140, 0.1);
+      border-radius: 10px;
+      padding: 0.8rem 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .values .check {
+      color: #0f7b36;
+      font-size: 1.02rem;
+    }
+
+    /* Ubicación */
+    .ubicacion-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.35rem;
+      align-items: stretch;
+    }
+
+    .map-wrap {
+      overflow: hidden;
+      border-radius: var(--radio);
+      box-shadow: var(--sombra-suave);
+      border: 1px solid rgba(31, 94, 140, 0.12);
+      min-height: 340px;
+      background: var(--blanco);
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      min-height: 340px;
+    }
+
+    .contact-card h3 {
+      margin-top: 0;
+      color: var(--azul-principal);
+      font-size: 1.2rem;
+    }
+
+    .contact-list {
+      padding: 0;
+      margin: 0 0 1.2rem;
+      list-style: none;
+    }
+
+    .contact-list li {
+      margin-bottom: 0.75rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: var(--azul-principal);
+      color: var(--blanco);
+      padding: 1.15rem 0;
+      font-size: 0.94rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 930px) {
+      .hero-grid,
+      .nosotros-wrap,
+      .ubicacion-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-bottom: 82px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .menu-btn { display: inline-flex; }
+
+      .menu {
+        position: absolute;
+        right: 4%;
+        top: 76px;
+        background: var(--blanco);
+        border: 1px solid rgba(31, 94, 140, 0.14);
+        border-radius: 12px;
+        box-shadow: var(--sombra-suave);
+        flex-direction: column;
+        align-items: flex-start;
+        width: min(250px, 92vw);
+        padding: 0.7rem;
+        display: none;
+      }
+
+      .menu.open { display: flex; }
+
+      .menu a { width: 100%; }
+
+      .values { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+      .cta { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar" aria-label="Barra de navegación principal">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="Ir a inicio">
+        <span class="logo-mark" aria-hidden="true">❤</span>
+        <span>Clínica de Atención Integral en Adicciones</span>
+      </a>
+
+      <button class="menu-btn" aria-expanded="false" aria-controls="menu" id="menuToggle">Menú</button>
+
+      <nav id="menu" class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <h1 id="hero-title">Recupera tu vida con apoyo profesional</h1>
+          <p>
+            Brindamos atención integral en adicciones con un acompañamiento humano, cercano y especializado,
+            para que cada persona y su familia encuentren un camino real hacia el bienestar emocional y la recuperación.
+          </p>
+          <a href="#ubicacion" class="cta">Contáctanos</a>
+        </div>
+
+        <aside class="hero-card" aria-label="Mensaje institucional">
+          <h2>Espacio para logo</h2>
+          <p>
+            Tu proceso importa. En nuestra clínica combinamos experiencia clínica, calidez humana y estrategias terapéuticas
+            basadas en evidencia para ofrecer un tratamiento respetuoso, confidencial y efectivo.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="nosotros" aria-labelledby="nosotros-title">
+      <div class="container">
+        <h2 class="section-title" id="nosotros-title">Sobre Nosotros</h2>
+
+        <div class="nosotros-wrap">
+          <article class="panel">
+            <p>
+              La Clínica de Atención Integral en Adicciones ofrece tratamiento profesional para personas con consumo problemático,
+              con un enfoque terapéutico humano, confidencial y multidisciplinario. Nuestro objetivo es acompañar cada etapa del
+              proceso de recuperación, fortaleciendo la salud mental, los vínculos familiares y la reintegración social.
+            </p>
+          </article>
+
+          <aside class="panel" aria-label="Valores de la clínica">
+            <ul class="values">
+              <li><span class="check">✔</span> Atención personalizada</li>
+              <li><span class="check">✔</span> Confidencialidad</li>
+              <li><span class="check">✔</span> Profesionales certificados</li>
+              <li><span class="check">✔</span> Tratamiento integral</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="container">
+        <h2 class="section-title" id="ubicacion-title">Ubicación</h2>
+
+        <div class="ubicacion-grid">
+          <div class="map-wrap">
+            <iframe
+              title="Mapa de ubicación de la clínica"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Ciudad+de+M%C3%A9xico&output=embed">
+            </iframe>
+          </div>
+
+          <aside class="panel contact-card" aria-label="Datos de contacto">
+            <h3>Contáctanos</h3>
+            <ul class="contact-list">
+              <li><strong>Dirección:</strong> Av. Salud Integral 123, Col. Centro, Ciudad de México</li>
+              <li><strong>Teléfono:</strong> +52 55 1234 5678</li>
+              <li><strong>Horario:</strong> Lunes a Sábado, 8:00 - 20:00</li>
+            </ul>
+            <a class="cta" href="tel:+525512345678">Llamar ahora</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Clínica de Atención Integral en Adicciones. Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
